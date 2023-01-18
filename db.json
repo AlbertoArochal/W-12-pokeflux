@@ -1,3 +1,37 @@
 {
-  "Pokemons": []
+  "Pokemons": [
+    {
+      "name": "venusaur",
+      "picture": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+      "id": 3,
+      "type": "grass",
+      "weight": 1000,
+      "height": 20,
+      "hp": 80,
+      "attack": 82,
+      "defense": 83
+    },
+    {
+      "name": "bulbasaur",
+      "picture": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+      "id": 1,
+      "type": "grass",
+      "weight": 69,
+      "height": 7,
+      "hp": 45,
+      "attack": 49,
+      "defense": 49
+    },
+    {
+      "name": "ivysaur",
+      "picture": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+      "id": 2,
+      "type": "grass",
+      "weight": 130,
+      "height": 10,
+      "hp": 60,
+      "attack": 62,
+      "defense": 63
+    }
+  ]
 }

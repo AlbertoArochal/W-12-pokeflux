@@ -11,3 +11,10 @@ export const prevPage = () => {
         payload: 25,
     };
 };
+
+export const selectFave = (pokemon: any) => {
+    return {
+        type: 'SELECT_FAVE',
+        payload: pokemon,
+    };
+};
