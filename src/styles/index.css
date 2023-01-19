@@ -81,7 +81,7 @@ a {
   transform: scale(1);
 }
 
-.Pokedex {
+.pokedex {
   margin-top: 100px;
   width: 75%;
   height: auto;
@@ -131,7 +131,7 @@ a {
   color: white;
 }
 
-.PokeFav {
+.pokeFav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,35 +146,35 @@ a {
   border-radius: 1%;
   text-decoration: none;
 }
-.PokeFav .pokeFav__ul {
+.pokeFav .pokeFav__ul {
   width: auto;
 }
-.PokeFav .pokeFav__ul li {
+.pokeFav .pokeFav__ul li {
   cursor: pointer;
   padding: 0.5rem;
   width: auto;
 }
-.PokeFav .pokeFav__ul li:hover {
+.pokeFav .pokeFav__ul li:hover {
   background-color: rgb(249, 82, 82);
   color: white;
   border-radius: 0.3rem;
 }
-.PokeFav .pokeFav__ball {
+.pokeFav .pokeFav__ball {
   width: 30px;
   height: 30px;
   cursor: pointer;
   animation: pokeLoader__Ball 1s infinite;
 }
-.PokeFav .pokeFav__ball:hover {
+.pokeFav .pokeFav__ball:hover {
   transform: scale(1.2);
 }
-.PokeFav .pokeFav__ball:active {
+.pokeFav .pokeFav__ball:active {
   transform: scale(1.1);
 }
-.PokeFav .pokeFav__img {
+.pokeFav .pokeFav__img {
   max-width: 100%;
 }
-.PokeFav .pokeFav__buttons {
+.pokeFav .pokeFav__buttons {
   position: absolute;
   top: calc(100% - 50px);
   left: 50%;
