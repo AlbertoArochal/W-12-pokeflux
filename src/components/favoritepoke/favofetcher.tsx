@@ -36,15 +36,17 @@ export const FaveFetcher = () => {
         <>
             {pokemes.map((pokemon: any) => {
                 return (
-                    <div key={pokemon.id}>
-                        <h2>{pokemon.name}</h2>
-                        {pokePicUrls[pokemon.name] && (
-                            <img
-                                src={pokePicUrls[pokemon.name]}
-                                alt={pokemon.name}
-                            />
-                        )}
-                    </div>
+                    <ul className="pokeFav__ul">
+                        <li key={pokemon.id} className="pokeLoader__li">
+                            <h2>{pokemon.name}</h2>
+                            {pokePicUrls[pokemon.name] && (
+                                <img
+                                    src={pokePicUrls[pokemon.name]}
+                                    alt={pokemon.name}
+                                />
+                            )}
+                        </li>
+                    </ul>
                 );
             })}
         </>

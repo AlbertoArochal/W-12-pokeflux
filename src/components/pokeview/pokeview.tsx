@@ -7,7 +7,9 @@ export const PokeView = () => {
         <>
             <PokeProvider>
                 <Header />
-                <PokeLoader />
+                <div className="Pokedex">
+                    <PokeLoader />
+                </div>
             </PokeProvider>
         </>
     );

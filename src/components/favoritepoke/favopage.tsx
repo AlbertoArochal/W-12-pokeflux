@@ -4,8 +4,7 @@ export const FavoPage = () => {
     return (
         <>
             <Header />
-            <div className="Pokedex">
-                <p className="Pokedex__counter"></p>
+            <div className="PokeFav">
                 <FaveFetcher />
             </div>
         </>

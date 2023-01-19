@@ -98,6 +98,28 @@
       "hp": 44,
       "attack": 48,
       "defense": 65
+    },
+    {
+      "name": "arbok",
+      "picture": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+      "id": 24,
+      "type": "poison",
+      "weight": 650,
+      "height": 35,
+      "hp": 60,
+      "attack": 95,
+      "defense": 69
+    },
+    {
+      "name": "beedrill",
+      "picture": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+      "id": 15,
+      "type": "bug",
+      "weight": 295,
+      "height": 10,
+      "hp": 65,
+      "attack": 90,
+      "defense": 40
     }
   ]
 }
