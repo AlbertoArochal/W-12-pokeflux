@@ -8,6 +8,8 @@ export const PokeRouter = () => {
             <Routes>
                 <Route path="/home" element={<PokeView />} />
                 <Route path="/favorites" element={<FavoPage />} />
+                <Route path="*" element={<Navigate to="/home" />} />
+
             </Routes>
         </>
     );
