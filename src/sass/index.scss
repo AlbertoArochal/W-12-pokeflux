@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    float: right;
+}
+
+.pokeLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .pokeLoader__ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 33.33%;
+            height: 70px;
+            line-height: 70px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    .pokeLoader__ball {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        animation: pokeLoader__Ball 1s infinite;
+    }
+    .pokeLoader__ball:hover {
+        transform: scale(1.2);
+    }
+    .pokeLoader__ball:active {
+        transform: scale(1.1);
+    }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getPokePic } from '../../helpers/getpokepic';
-import { useContext } from 'react';
+import { useContext, useCallback } from 'react';
 import { PokeContext } from '../../context/pokecontext';
 
 export interface PokeaType {
@@ -20,19 +20,22 @@ export const PokeLoader = () => {
         baseUrl = 'https://anaju-txikia.onrender.com';
     }
 
-    const fetchPokemon = (offset: number, limit: number) => {
-        fetch(
-            `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
-        )
-            .then((response) => response.json())
-            .then((data) => {
-                setPokeArray(data.results);
-            });
-    };
+    const fetchPokemon = useCallback(
+        (offset: number, limit: number) => {
+            fetch(
+                `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    setPokeArray(data.results);
+                });
+        },
+        [paginationState.offset, paginationState.limit, setPokeArray]
+    );
 
     useEffect(() => {
         fetchPokemon(paginationState.offset, paginationState.limit);
-    }, []);
+    }, [paginationState.offset, paginationState.limit, fetchPokemon]);
 
     useEffect(() => {
         const promises = pokeArray.map((pokea: PokeaType) =>
@@ -90,7 +93,7 @@ export const PokeLoader = () => {
         <div className="pokeLoader">
             <ul className="pokeLoader__ul">
                 {pokeArray.length > 0 &&
-                    pokeArray.map((pokea: PokeaType) => {
+                    pokeArray.map((pokea: PokeaType, index) => {
                         return (
                             <>
                                 <li className="pokeLoader__li" key={pokea.name}>
@@ -101,6 +104,7 @@ export const PokeLoader = () => {
                                         onClick={() => handleFave(pokea.name)}
                                         width="30px"
                                         height="30px"
+                                        key={index}
                                     ></img>
                                     {pokePicUrls[pokea.name] && (
                                         <img

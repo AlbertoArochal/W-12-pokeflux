@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import { PokeView } from './components/pokeview/pokeview';
+import { PokeRouter } from './router/pokerouter';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
 root.render(
     <React.StrictMode>
-        <PokeView />
+        <BrowserRouter>
+            <PokeRouter />
+        </BrowserRouter>
     </React.StrictMode>
 );
 
