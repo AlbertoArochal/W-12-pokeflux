@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext, useCallback } from 'react';
 import { getPokePic } from '../../helpers/getpokepic';
-import { useContext, useCallback } from 'react';
 import { PokeContext } from '../../context/pokecontext';
 
 export interface PokeaType {
